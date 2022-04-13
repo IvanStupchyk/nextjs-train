@@ -1,0 +1,21 @@
+.mainLayout__nav {
+  position: fixed;
+  height: 60px;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: darkblue;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+main {
+  margin-top: 80px;
+  padding: 0 15px;
+}
