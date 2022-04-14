@@ -1,0 +1,22 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "First post",
+      "body": "Created with <3 for front-end developers who need a quick back-end for prototyping and mocking."
+    },
+    {
+      "id": 2,
+      "title": "JS post",
+      "body": "JS its one of the most popular languages in the world ."
+    },
+    {
+      "id": 3,
+      "title": "NEXT post",
+      "body": "Next its framework for creating SSR "
+    }
+  ],
+  "about": {
+    "title": "Page about us"
+  }
+}

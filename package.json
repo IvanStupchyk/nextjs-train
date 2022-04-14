@@ -6,10 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "serve": "concurrently \"npm run dev\" \"npm run mock\"",
+    "mock": "json-server -w db.json -p 4200 -d 1450"
   },
   "dependencies": {
     "next": "12.1.5",
+    "next-progress": "^2.2.0",
+    "nextjs-progressbar": "^0.0.14",
     "react": "18.0.0",
     "react-dom": "18.0.0"
   },
@@ -17,6 +21,7 @@
     "@next/eslint-plugin-next": "^12.1.5",
     "@typescript-eslint/eslint-plugin": "^5.19.0",
     "@typescript-eslint/parser": "^5.19.0",
+    "concurrently": "^7.1.0",
     "eslint": "^7.32.0",
     "eslint-config-next": "12.1.5",
     "eslint-config-prettier": "^8.5.0",
