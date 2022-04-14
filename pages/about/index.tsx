@@ -1,8 +1,13 @@
 import React from 'react'
 import Router from 'next/router'
 import MainLayout from '../../components/MainLayout/MainLayout'
+import { AboutPage } from '../../interfaces/about'
 
-export default function About({title}) {
+interface AboutPageProps {
+  title: string
+}
+
+export default function About({title}: AboutPageProps) {
   const linkClickHandler = (link) => {
     return () => {
       Router.push(`${link}`)
@@ -24,8 +29,8 @@ export default function About({title}) {
 }
 
 About.getInitialProps = async () => {
-  const res = await fetch('http://localhost:4200/about')
-  const data = await res.json()
+  const res = await fetch(`${process.env.API_URL}/about`)
+  const data: AboutPage = await res.json()
 
   return {
     title: data.title
