@@ -2,7 +2,12 @@ import React from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 
-export default function MainLayout({children, title = 'Next app'}) {
+interface MainLayoutProps {
+  title?: string
+  children: any
+}
+
+export default function MainLayout({children, title = 'Next app'}: MainLayoutProps) {
   return (
     <>
       <Head>
